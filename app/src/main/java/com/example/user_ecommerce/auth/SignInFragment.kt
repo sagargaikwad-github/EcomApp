@@ -64,6 +64,7 @@ class SignInFragment : Fragment() {
         })
     }
     private fun continueButtonClick() {
+
         binding.signINContinueBTN.setOnClickListener {
             val phoneNumber = binding.signINPhoneET.text.toString()
 

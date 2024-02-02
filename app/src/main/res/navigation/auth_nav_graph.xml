@@ -7,25 +7,37 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.user_ecommerce.SplashFragment"
+        android:name="com.example.user_ecommerce.auth.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/splashFragment"
+            app:enterAnim="@anim/anim_from_right"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/otpFragment"
-        android:name="com.example.user_ecommerce.OtpFragment"
+        android:name="com.example.user_ecommerce.auth.OtpFragment"
         android:label="fragment_otp"
-        tools:layout="@layout/fragment_otp" />
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_otpFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/signInFragment"
+            app:enterAnim="@anim/anim_from_left"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.user_ecommerce.SignInFragment"
+        android:name="com.example.user_ecommerce.auth.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
             android:id="@+id/action_signInFragment_to_otpFragment"
-            app:destination="@id/otpFragment" />
+            app:destination="@id/otpFragment"
+            app:enterAnim="@anim/anim_from_right"
+            app:popUpTo="@id/signInFragment" />
     </fragment>
 </navigation>

@@ -4,4 +4,9 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <style name="BoxColor" parent="ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#ffffff</item>
+        <item name="hintTextColor">#ffffff</item>
+    </style>
 </resources>

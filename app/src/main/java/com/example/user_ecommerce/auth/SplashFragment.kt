@@ -16,8 +16,6 @@ import com.example.user_ecommerce.R
  * create an instance of this fragment.
  */
 class SplashFragment : Fragment() {
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

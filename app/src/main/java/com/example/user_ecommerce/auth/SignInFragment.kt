@@ -34,12 +34,15 @@ class SignInFragment : Fragment() {
     }
 
     private fun editTextConditions() {
+
+
         binding.signINPhoneET.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                //After 10 digits we changed buttonColor.
                 if (p0?.length == 10) {
                     binding.signINContinueBTN.setBackgroundColor(
                         ContextCompat.getColor(
@@ -63,8 +66,10 @@ class SignInFragment : Fragment() {
 
         })
     }
+
     private fun continueButtonClick() {
 
+        //Sending phoneNumber to next Activity.
         binding.signINContinueBTN.setOnClickListener {
             val phoneNumber = binding.signINPhoneET.text.toString()
 
